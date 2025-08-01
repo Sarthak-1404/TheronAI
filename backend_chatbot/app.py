@@ -1,34 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import json
 import os
 
 app = Flask(__name__)
 CORS(app)
-
-# Simple chatbot responses for deployment
-def get_simple_response(message):
-    """Simple response function for deployment testing."""
-    message = message.lower()
-    
-    if 'hello' in message or 'hi' in message:
-        return "Hello! I'm your medical assistant. How can I help you today?"
-    elif 'symptom' in message:
-        return "I can help you understand symptoms. Please describe what you're experiencing."
-    elif 'treatment' in message:
-        return "I can provide general treatment information. What condition are you asking about?"
-    elif 'medication' in message:
-        return "I can help with medication information. What medication are you asking about?"
-    elif 'insurance' in message:
-        return "I can help with insurance policy questions. What would you like to know?"
-    elif 'asthma' in message:
-        return "Asthma is a chronic respiratory condition. Common symptoms include wheezing, shortness of breath, and chest tightness. Treatment includes inhalers and avoiding triggers."
-    elif 'diabetes' in message:
-        return "Diabetes affects blood sugar levels. Type 1 requires insulin, while Type 2 can be managed with diet, exercise, and medication."
-    elif 'headache' in message:
-        return "Headaches can have many causes. Common treatments include rest, hydration, and over-the-counter pain relievers. See a doctor if severe or persistent."
-    else:
-        return "I'm here to help with medical information. You can ask me about symptoms, treatments, medications, or insurance policies."
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
@@ -48,8 +23,8 @@ def chat():
                 'status': 'error'
             }), 400
         
-        # Get response from chatbot
-        bot_response = get_simple_response(user_message)
+        # Simple response
+        bot_response = f"Hello! I received your message: '{user_message}'. I'm a medical assistant chatbot."
         
         return jsonify({
             'response': bot_response,
@@ -70,24 +45,15 @@ def health_check():
         'message': 'Medical Assistant Chatbot is running'
     })
 
-@app.route('/api/capabilities', methods=['GET'])
-def get_capabilities():
-    """Get chatbot capabilities."""
+@app.route('/', methods=['GET'])
+def home():
+    """Home endpoint."""
     return jsonify({
-        'capabilities': [
-            'Disease and condition information',
-            'Symptom analysis',
-            'Treatment options',
-            'Medication information',
-            'Health insurance policy queries',
-            'General health advice',
-            'Conversational interactions'
-        ],
-        'data_sources': [
-            'Medical conditions database',
-            'Health insurance policies',
-            'Conversation patterns'
-        ]
+        'message': 'Medical Assistant Chatbot API',
+        'endpoints': {
+            'chat': '/api/chat',
+            'health': '/api/health'
+        }
     })
 
 if __name__ == '__main__':
