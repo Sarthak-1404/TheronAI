@@ -8,12 +8,14 @@
     "backend"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:chatbot\"",
     "dev:frontend": "cd my-react-app && npm run dev",
     "dev:backend": "cd backend && npm run dev",
+    "dev:chatbot": "cd backend_chatbot && python start_chatbot.py",
     "build": "npm run build:frontend",
     "build:frontend": "cd my-react-app && npm run build",
     "start": "cd backend && npm start",
+    "start:chatbot": "cd backend_chatbot && python start_chatbot.py",
     "install:all": "npm install && cd my-react-app && npm install && cd ../backend && npm install"
   },
   "devDependencies": {

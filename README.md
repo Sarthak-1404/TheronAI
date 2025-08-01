@@ -75,12 +75,13 @@ A comprehensive healthcare management system built with React, Node.js, and Pyth
 
 4. **Start development servers**
    ```bash
-   # Start both frontend and backend
+   # Start all services (frontend, backend, chatbot)
    npm run dev
    
    # Or start individually
    npm run dev:frontend
    npm run dev:backend
+   npm run dev:chatbot
    ```
 
 ## 🌐 Deployment
@@ -160,7 +161,7 @@ npm run test-api
 
 # Test chatbot
 cd backend_chatbot
-python test_chatbot.py
+python start_chatbot.py
 ```
 
 ## 📁 API Endpoints

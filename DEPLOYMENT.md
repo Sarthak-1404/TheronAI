@@ -118,6 +118,7 @@ Add these to Railway:
 ```
 FLASK_ENV=production
 PORT=5001
+FLASK_APP=app.py
 ```
 
 ### 4.3 Get Chatbot URL
@@ -217,7 +218,7 @@ npm start
 
 # Test chatbot locally
 cd backend_chatbot
-python app.py
+python start_chatbot.py
 ```
 
 ## 📈 Step 9: Performance Optimization
