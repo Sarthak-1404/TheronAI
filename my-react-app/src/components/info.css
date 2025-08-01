@@ -1,0 +1,284 @@
+.step-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #e8f4fd 0%, #d1f2eb 100%);
+  border-radius: 15px;
+  padding: 3vh;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative; /* Add position relative */
+}
+
+/* Info Container */
+.info-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 12vh; /* Add more bottom margin to make room for buttons */
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+
+.info-container::-webkit-scrollbar {
+  display: none;
+}
+
+.step-header {
+  text-align: center;
+  margin-bottom: 4vh;
+  /* Will scroll up and disappear */
+}
+
+.step-header h2 {
+  font-size: 3.2vh;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1.5vh 0;
+}
+
+.step-header p {
+  font-size: 1.8vh;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Info Content */
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  margin-bottom: 2vh;
+}
+
+/* Age Section */
+.age-section {
+  background: white;
+  padding: 3vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.age-section label {
+  display: block;
+  font-size: 1.8vh;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5vh;
+}
+
+.age-section input {
+  width: 40%; /* Reduced from 60% to 40% */
+  padding: 1.5vh 2vh; /* Reduced padding */
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.6vh; /* Reduced font size */
+  transition: all 0.3s ease;
+  background: white;
+  color: #2c3e50;
+  margin: 0 auto; /* Center the input */
+  display: block; /* Ensure it's a block element for centering */
+}
+
+.age-section input:focus {
+  outline: none;
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+.age-section input::placeholder {
+  color: #bdc3c7;
+}
+
+/* Gender Section */
+.gender-section {
+  background: white;
+  padding: 3vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gender-section label {
+  display: block;
+  font-size: 1.8vh;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2vh;
+}
+
+.gender-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vh;
+}
+
+.gender-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5vh;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.gender-card:hover {
+  border-color: #2ecc71;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
+}
+
+.gender-card.selected {
+  border-color: #2ecc71;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(39, 174, 96, 0.1) 100%);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+}
+
+.gender-icon {
+  margin-bottom: 1vh;
+  color: #2ecc71;
+}
+
+.gender-card.selected .gender-icon {
+  color: #2ecc71;
+}
+
+.gender-card span {
+  font-size: 1.6vh;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.gender-card.selected span {
+  color: #2ecc71;
+}
+
+/* Continue Section */
+.continue-section {
+  position: absolute; /* Position absolutely like symptom page */
+  bottom: 8vh; /* Match symptom page positioning */
+  left: 3vh;
+  right: 3vh;
+  background: linear-gradient(135deg, #e8f4fd 0%, #d1f2eb 100%);
+  border-radius: 10px;
+  padding: 2vh;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 2.5vh 3vh;
+  border: none;
+  border-radius: 15px;
+  font-size: 2vh;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  min-height: 6vh;
+}
+
+.continue-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+}
+
+.continue-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .step-container {
+    padding: 2vh;
+  }
+
+  .step-header h2 {
+    font-size: 2.6vh;
+  }
+
+  .step-header p {
+    font-size: 1.6vh;
+  }
+
+  .age-section,
+  .gender-section {
+    padding: 2.5vh;
+  }
+
+  .age-section input {
+    width: 50%; /* Slightly larger on tablet but still centered */
+    padding: 1.4vh 1.8vh;
+    font-size: 1.4vh;
+  }
+
+  .gender-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5vh;
+  }
+
+  .gender-card {
+    padding: 2vh;
+  }
+
+  .continue-btn {
+    padding: 2vh 2.5vh;
+    font-size: 1.8vh;
+  }
+
+  /* Adjust container margin for mobile */
+  .info-container {
+    margin-bottom: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-container {
+    padding: 1.5vh;
+    height: 100%; /* Ensure full height */
+  }
+
+  .step-header h2 {
+    font-size: 2.4vh;
+  }
+
+  .step-header p {
+    font-size: 1.4vh;
+  }
+
+  .age-section,
+  .gender-section {
+    padding: 2vh;
+  }
+
+  .age-section input {
+    width: 60%; /* Larger on mobile for better usability but still centered */
+    padding: 1.2vh 1.6vh;
+    font-size: 1.3vh;
+  }
+
+  .gender-card {
+    padding: 1.5vh;
+  }
+
+  .continue-btn {
+    padding: 1.8vh 2vh;
+    font-size: 1.6vh;
+  }
+
+  /* Reduce container margin for mobile */
+  .info-container {
+    margin-bottom: 8vh;
+    min-height: 70vh; /* Add minimum height for mobile */
+    height: 70vh; /* Set fixed height for mobile */
+  }
+}

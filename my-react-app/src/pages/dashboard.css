@@ -1,0 +1,356 @@
+/* Dashboard Container */
+.dashboard {
+  width: calc(100vw - 7vh); /* Full viewport width minus sidebar width */
+  min-height: calc(100vh - 7vh); /* Full viewport height minus navbar height */
+  padding: 3vh 4vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-sizing: border-box;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 6vh;
+  padding: 2vh 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content > div {
+  text-align: left;
+}
+
+.dashboard-title {
+  font-size: 4.5vh;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 1vh;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+.dashboard-subtitle {
+  font-size: 2.2vh;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 1vh;
+  line-height: 1.4;
+}
+
+.dashboard-description {
+  font-size: 1.6vh;
+  color: #7f8c8d;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 3vh;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 16px 16px 0 0;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card.clickable {
+  cursor: pointer;
+}
+
+.dashboard-card.clickable:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vh;
+  position: relative;
+}
+
+.card-icon {
+  width: 5vh;
+  height: 5vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.card-icon svg {
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -0.5vh;
+  right: -0.5vh;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 2.5vh;
+  height: 2.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vh;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.4);
+  }
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 2.2vh;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1vh;
+  line-height: 1.3;
+}
+
+.card-text {
+  font-size: 1.4vh;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Specific Card Styles */
+.dashboard-card:nth-child(1) .card-icon {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.dashboard-card:nth-child(2) .card-icon {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.dashboard-card:nth-child(3) .card-icon {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    width: calc(100vw - 8vh); /* Account for wider sidebar on tablets */
+    min-height: calc(100vh - 7vh);
+    padding: 2vh 3vh;
+  }
+  
+  .dashboard-title {
+    font-size: 3.5vh;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.8vh;
+  }
+  
+  .dashboard-description {
+    font-size: 1.4vh;
+  }
+  
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+  }
+  
+  .dashboard-card {
+    padding: 2.5vh;
+    min-height: 180px;
+  }
+  
+  .card-title {
+    font-size: 2vh;
+  }
+  
+  .card-text {
+    font-size: 1.3vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    width: 100vw; /* Full width on mobile since sidebar is at bottom */
+    min-height: calc(100vh - 12vh); /* Account for navbar and bottom sidebar */
+    padding: 1.5vh 2vh;
+  }
+  
+  .dashboard-title {
+    font-size: 3vh;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.6vh;
+  }
+  
+  .dashboard-description {
+    font-size: 1.3vh;
+  }
+  
+  .dashboard-cards {
+    gap: 1.5vh;
+  }
+  
+  .dashboard-card {
+    padding: 2vh;
+    min-height: 160px;
+  }
+  
+  .card-icon {
+    width: 4vh;
+    height: 4vh;
+  }
+  
+  .card-icon svg {
+    width: 2vh;
+    height: 2vh;
+  }
+  
+  .notification-badge {
+    width: 2vh;
+    height: 2vh;
+    font-size: 1vh;
+  }
+  
+  .card-title {
+    font-size: 1.8vh;
+  }
+  
+  .card-text {
+    font-size: 1.2vh;
+  }
+}
+
+/* Animation for cards appearance */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card {
+  animation: slideUp 0.6s ease-out;
+}
+
+.dashboard-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.dashboard-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dashboard-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Focus styles for accessibility */
+.dashboard-card:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dashboard {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+  
+  .dashboard-title {
+    color: #ecf0f1;
+  }
+  
+  .dashboard-subtitle {
+    color: #bdc3c7;
+  }
+  
+  .dashboard-description {
+    color: #95a5a6;
+  }
+  
+  .dashboard-card {
+    background: rgba(44, 62, 80, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-title {
+    color: #ecf0f1;
+  }
+  
+  .card-text {
+    color: #bdc3c7;
+  }
+}

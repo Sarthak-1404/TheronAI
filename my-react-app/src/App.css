@@ -1,0 +1,217 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7cadf7 0%, #c3cfe2 100%);
+}
+
+.content {
+  padding-top: 7vh; /* Account for fixed navbar height */
+  padding-left: 7vh; /* Account for sidebar width */
+  padding-right: 2vh; /* Add right padding to prevent overflow */
+  min-height: 93vh; /* Full height minus navbar */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Homepage specific styles - no padding for homepage */
+.content .home {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100vw !important;
+  min-height: 100vh !important;
+  max-width: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+/* Page Placeholder Styles */
+.page-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 3vh;
+  color: #667eea;
+  font-weight: 600;
+  text-align: center;
+  padding: 4vh;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 5vh 5%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 4vh;
+}
+
+.hero-section h1 {
+  font-size: 4vh;
+  color: #333;
+  margin-bottom: 2vh;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section p {
+  font-size: 2vh;
+  color: #666;
+  margin-bottom: 4vh;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3vh;
+  margin-top: 4vh;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature h3 {
+  font-size: 2.2vh;
+  color: #667eea;
+  margin-bottom: 1vh;
+}
+
+.feature p {
+  font-size: 1.6vh;
+  color: #666;
+  line-height: 1.6;
+}
+
+.demo-content {
+  padding: 0 5% 5vh;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo-content h2 {
+  font-size: 3vh;
+  color: #333;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.demo-content p {
+  font-size: 1.8vh;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2vh;
+  text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4vh 3%;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5vh;
+  }
+  
+  .hero-section p {
+    font-size: 1.8vh;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+  }
+  
+  .feature {
+    padding: 2.5vh;
+  }
+  
+  .feature h3 {
+    font-size: 2vh;
+  }
+  
+  .feature p {
+    font-size: 1.5vh;
+  }
+  
+  .demo-content {
+    padding: 0 3% 4vh;
+  }
+  
+  .demo-content h2 {
+    font-size: 2.5vh;
+  }
+  
+  .demo-content p {
+    font-size: 1.6vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3vh 2%;
+  }
+  
+  .hero-section h1 {
+    font-size: 3vh;
+  }
+  
+  .hero-section p {
+    font-size: 1.6vh;
+  }
+  
+  .feature {
+    padding: 2vh;
+  }
+  
+  .feature h3 {
+    font-size: 1.8vh;
+  }
+  
+  .feature p {
+    font-size: 1.4vh;
+  }
+  
+  .demo-content {
+    padding: 0 2% 3vh;
+  }
+  
+  .demo-content h2 {
+    font-size: 2.2vh;
+  }
+  
+  .demo-content p {
+    font-size: 1.5vh;
+  }
+}
+
+/* Responsive adjustments for content */
+@media (max-width: 768px) {
+  .content {
+    padding-left: 8vh; /* Account for wider sidebar on tablets */
+    padding-right: 2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-left: 0; /* No left padding on mobile since sidebar is at bottom */
+    padding-right: 0;
+    padding-bottom: 9vh; /* Account for bottom sidebar height */
+  }
+  
+  .page-placeholder {
+    font-size: 2.5vh;
+    padding: 2vh;
+  }
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "topic": "coverage",
+    "question": "What does health insurance cover?",
+    "answer": "Health insurance policies typically cover hospitalization, surgeries, daycare procedures, pre/post hospitalization expenses, ambulance charges, and critical illness. Coverage varies by plan - always check your policy document for specific inclusions.",
+    "keywords": ["coverage", "what covered", "policy covers", "insurance covers"]
+  },
+  {
+    "topic": "maternity",
+    "question": "Does health insurance cover maternity?",
+    "answer": "Most policies offer maternity coverage after a waiting period (usually 9–24 months). This includes delivery expenses and sometimes newborn care, but may exclude IVF or fertility treatments. Check your policy for specific maternity benefits.",
+    "keywords": ["maternity", "pregnancy", "delivery", "childbirth", "maternity coverage"]
+  },
+  {
+    "topic": "pre-existing",
+    "question": "Are pre-existing conditions covered?",
+    "answer": "Pre-existing illnesses are usually excluded for the first 2–4 years of the policy. After the waiting period, they are covered as per policy terms. Always disclose all health conditions when buying a policy.",
+    "keywords": ["pre-existing", "existing conditions", "prior illness", "pre-existing conditions"]
+  },
+  {
+    "topic": "dental",
+    "question": "Does health insurance cover dental treatment?",
+    "answer": "Basic dental care is usually excluded unless required due to an accident or as part of a major surgery. Some policies offer dental riders as add-ons. Check your policy for dental coverage details.",
+    "keywords": ["dental", "teeth", "dental care", "dental treatment"]
+  },
+  {
+    "topic": "mental_health",
+    "question": "Is mental health covered?",
+    "answer": "Recent IRDAI guidelines mandate that mental illness is covered like any other illness. This includes psychiatric consultations, therapy, and hospitalization for mental health conditions. Check your policy for specific mental health benefits.",
+    "keywords": ["mental health", "psychiatric", "depression", "anxiety", "mental illness"]
+  },
+  {
+    "topic": "telemedicine",
+    "question": "Does insurance cover online consultations?",
+    "answer": "Many modern policies include online doctor consultations (telemedicine) as part of outpatient or wellness benefits. This allows you to consult doctors remotely. Check if your policy includes telemedicine coverage.",
+    "keywords": ["telemedicine", "online consultation", "video consultation", "remote doctor"]
+  },
+  {
+    "topic": "ambulance",
+    "question": "Are ambulance charges covered?",
+    "answer": "Most policies cover ambulance charges up to a fixed limit per hospitalization. This includes emergency ambulance services. Check your policy for the specific ambulance coverage limit.",
+    "keywords": ["ambulance", "emergency transport", "ambulance charges"]
+  },
+  {
+    "topic": "rehabilitation",
+    "question": "Are rehabilitation expenses covered?",
+    "answer": "Post-hospitalization therapy and rehabilitation may be covered in comprehensive plans. This includes physiotherapy, occupational therapy, and other rehabilitation services. Coverage varies by policy.",
+    "keywords": ["rehabilitation", "physiotherapy", "therapy", "post-hospitalization"]
+  },
+  {
+    "topic": "no_claim_bonus",
+    "question": "What is no-claim bonus?",
+    "answer": "If you don't claim during a year, you may get increased coverage (sum insured) the next year as a bonus. This is called no-claim bonus and can increase your coverage by 5-50% depending on the insurer.",
+    "keywords": ["no claim bonus", "bonus", "no claim", "claim free"]
+  },
+  {
+    "topic": "portability",
+    "question": "Can I switch insurance companies?",
+    "answer": "Yes, you can switch insurance providers without losing accrued benefits (portability), subject to IRDAI rules. You can port your policy at renewal time to another insurer while maintaining waiting period benefits.",
+    "keywords": ["portability", "switch insurance", "change insurer", "port policy"]
+  },
+  {
+    "topic": "cashless",
+    "question": "What is cashless hospitalization?",
+    "answer": "Most insurers offer cashless treatment at network hospitals. You don't need to pay upfront - the insurer settles directly with the hospital. Always check if your hospital is in-network before admission.",
+    "keywords": ["cashless", "network hospital", "cashless treatment", "no payment"]
+  },
+  {
+    "topic": "claim_process",
+    "question": "How do I file a claim?",
+    "answer": "For cashless claims, inform the insurer and hospital in advance. For reimbursement, submit all bills and documents after discharge. Keep all medical records and bills for claim processing.",
+    "keywords": ["claim", "file claim", "claim process", "how to claim"]
+  },
+  {
+    "topic": "critical_illness",
+    "question": "What is critical illness insurance?",
+    "answer": "Critical illness plans pay a lump sum on diagnosis of specified illnesses (e.g., cancer, heart attack, stroke). These are separate from regular health insurance and provide financial support during serious illnesses.",
+    "keywords": ["critical illness", "lump sum", "cancer", "heart attack", "stroke"]
+  },
+  {
+    "topic": "room_rent",
+    "question": "What are room rent limits?",
+    "answer": "Some policies cap the room rent per day. Exceeding this may lead to proportionate deduction in claim settlement. For example, if your limit is ₹5,000 and you choose a ₹10,000 room, your claim may be reduced by 50%.",
+    "keywords": ["room rent", "room limit", "hospital room", "accommodation"]
+  },
+  {
+    "topic": "copay",
+    "question": "What is copayment?",
+    "answer": "Some policies require you to pay a percentage of the claim amount (copayment), especially for senior citizens. For example, with 10% copay, you pay 10% of the bill and insurer pays 90%.",
+    "keywords": ["copay", "copayment", "percentage payment", "shared payment"]
+  },
+  {
+    "topic": "sub_limits",
+    "question": "What are sub-limits?",
+    "answer": "Certain treatments (e.g., cataract, knee replacement) may have sub-limits. This means there's a maximum amount the insurer will pay for specific procedures, regardless of your total sum insured.",
+    "keywords": ["sub-limits", "treatment limits", "procedure limits", "specific limits"]
+  },
+  {
+    "topic": "organ_donor",
+    "question": "Are organ donor expenses covered?",
+    "answer": "Expenses related to organ donation (for the recipient) are usually covered, but not for the donor. This includes hospitalization, surgery, and post-transplant care for the recipient.",
+    "keywords": ["organ donor", "transplant", "organ donation", "donor expenses"]
+  },
+  {
+    "topic": "alternate_therapy",
+    "question": "Are alternative treatments covered?",
+    "answer": "Some insurers cover Ayurveda, Homeopathy, or Unani (AYUSH) treatments, subject to policy terms. Coverage is usually limited and may require pre-authorization. Check your policy for AYUSH coverage.",
+    "keywords": ["alternative", "ayurveda", "homeopathy", "unani", "ayush"]
+  },
+  {
+    "topic": "international",
+    "question": "Does insurance cover treatment abroad?",
+    "answer": "Only global coverage plans cover treatment abroad. Standard policies do not cover overseas treatment. If you need international coverage, look for specific global health insurance plans.",
+    "keywords": ["international", "abroad", "overseas", "foreign treatment"]
+  },
+  {
+    "topic": "second_opinion",
+    "question": "Can I get a second medical opinion?",
+    "answer": "Some plans allow a free second medical opinion for major illnesses. This helps you get another doctor's perspective on your diagnosis and treatment plan. Check if your policy includes this benefit.",
+    "keywords": ["second opinion", "medical opinion", "doctor opinion"]
+  },
+  {
+    "topic": "daycare",
+    "question": "What are daycare procedures?",
+    "answer": "Most policies now cover treatments that do not require 24-hour hospitalization (e.g., cataract surgery, chemotherapy, dialysis). These are called daycare procedures and are covered like regular hospitalization.",
+    "keywords": ["daycare", "day care", "same day surgery", "outpatient surgery"]
+  },
+  {
+    "topic": "pre_authorization",
+    "question": "What is pre-authorization?",
+    "answer": "Many policies require prior approval (pre-authorization) before major procedures or planned admissions. This ensures your treatment is covered. Contact your insurer before planned hospitalizations.",
+    "keywords": ["pre-authorization", "prior approval", "pre-approval", "authorization"]
+  },
+  {
+    "topic": "home_care",
+    "question": "Does insurance cover home care?",
+    "answer": "Some modern plans cover in-home doctor visits and nursing care, especially for post-hospitalization recovery. This includes home nursing and medical equipment. Check your policy for home care benefits.",
+    "keywords": ["home care", "home nursing", "home visit", "home treatment"]
+  },
+  {
+    "topic": "exclusions",
+    "question": "What is not covered by health insurance?",
+    "answer": "Common exclusions include cosmetic surgery, self-inflicted injuries, dental/vision (unless accident), infertility, experimental treatments, and pre-existing conditions during waiting period. Always read your policy exclusions section.",
+    "keywords": ["exclusions", "not covered", "what not covered", "excluded"]
+  },
+  {
+    "topic": "waiting_period",
+    "question": "What is the waiting period?",
+    "answer": "Most policies have a 30-day initial waiting period (except for accidents) and longer waiting periods for specific diseases (2-4 years) and maternity (9-24 months). No coverage during waiting periods.",
+    "keywords": ["waiting period", "waiting time", "coverage delay", "initial period"]
+  },
+  {
+    "topic": "renewal",
+    "question": "How do I renew my health insurance?",
+    "answer": "Health insurance is renewable for life as per IRDAI rules. Renew on time to avoid losing benefits. You can renew online, through agents, or directly with the insurer. Late renewal may require medical tests.",
+    "keywords": ["renewal", "renew", "policy renewal", "extend policy"]
+  },
+  {
+    "topic": "network_hospitals",
+    "question": "What are network hospitals?",
+    "answer": "Cashless treatment is available only at network hospitals. These are hospitals that have tie-ups with your insurer. Check your insurer's website for the latest list of network hospitals.",
+    "keywords": ["network hospitals", "tie-up hospitals", "partner hospitals", "cashless hospitals"]
+  },
+  {
+    "topic": "premium",
+    "question": "Why do premiums increase?",
+    "answer": "Premiums may increase with age, claims history, or medical conditions at renewal. Premiums also increase with inflation and medical cost inflation. Some policies offer premium loading for high-risk individuals.",
+    "keywords": ["premium", "premium increase", "cost", "price", "insurance cost"]
+  },
+  {
+    "topic": "claim_rejection",
+    "question": "Why might my claim be rejected?",
+    "answer": "Claims may be rejected for non-disclosure of health conditions, policy lapse, treatment of exclusions, or incomplete documentation. Always disclose all health conditions when buying a policy and submit complete documents.",
+    "keywords": ["claim rejection", "rejected claim", "claim denied", "why rejected"]
+  },
+  {
+    "topic": "family_floater",
+    "question": "What is a family floater plan?",
+    "answer": "Family floater plans cover the entire family under one policy with a shared sum insured. Any family member can use the entire coverage. This is usually more cost-effective than individual policies.",
+    "keywords": ["family floater", "family plan", "shared coverage", "family insurance"]
+  },
+  {
+    "topic": "top_up",
+    "question": "What is a top-up plan?",
+    "answer": "Top-up plans provide additional coverage above your base policy. They activate only after you exhaust your base policy coverage. These are cost-effective ways to increase your total coverage.",
+    "keywords": ["top-up", "additional coverage", "extra coverage", "supplementary"]
+  },
+  {
+    "topic": "super_top_up",
+    "question": "What is a super top-up plan?",
+    "answer": "Super top-up plans work like top-up but with higher deductibles. They provide very high coverage at lower premiums. Ideal for those who want high coverage at affordable rates.",
+    "keywords": ["super top-up", "high coverage", "low premium", "high deductible"]
+  },
+  {
+    "topic": "group_insurance",
+    "question": "What is group health insurance?",
+    "answer": "Group insurance covers employees of an organization under one policy. Premiums are usually lower and coverage is standardized. Coverage continues as long as you're employed with the organization.",
+    "keywords": ["group insurance", "employee insurance", "corporate insurance", "company insurance"]
+  },
+  {
+    "topic": "senior_citizen",
+    "question": "Is there special insurance for senior citizens?",
+    "answer": "Yes, many insurers offer special health insurance for senior citizens (usually 60+ years). These may have higher premiums, copayment requirements, and specific waiting periods. Some government schemes also exist.",
+    "keywords": ["senior citizen", "elderly", "old age", "senior insurance"]
+  },
+  {
+    "topic": "preventive_care",
+    "question": "Does insurance cover preventive care?",
+    "answer": "Some modern policies include preventive care like health check-ups, vaccinations, and wellness programs. These help prevent illnesses and are usually covered as outpatient benefits.",
+    "keywords": ["preventive", "health check-up", "vaccination", "wellness", "prevention"]
+  },
+  {
+    "topic": "emergency",
+    "question": "What about emergency treatment?",
+    "answer": "Emergency treatment is usually covered even during waiting periods. This includes accidents and sudden illnesses requiring immediate hospitalization. Contact your insurer within 24-48 hours of emergency admission.",
+    "keywords": ["emergency", "accident", "sudden illness", "urgent care"]
+  }
+] 

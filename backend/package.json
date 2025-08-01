@@ -1,0 +1,47 @@
+{
+  "name": "healthcare-backend",
+  "version": "1.0.0",
+  "description": "Backend for Healthcare Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "node start.js dev",
+    "dev-no-mongo": "node start.js dev-no-mongo",
+    "test": "node start.js test",
+    "server": "node server.js",
+    "test-api": "node test-api.js"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.3.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.10.0",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.5.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "pdfkit": "^0.13.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  },
+  "keywords": [
+    "healthcare",
+    "backend",
+    "express",
+    "mongodb",
+    "api"
+  ],
+  "author": "Healthcare Team",
+  "license": "MIT"
+}

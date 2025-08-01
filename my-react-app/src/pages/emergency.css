@@ -1,0 +1,312 @@
+/* Emergency Popup Styles */
+.emergency-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.emergency-popup {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90vw;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: emergencySlideIn 0.3s ease-out;
+}
+
+@keyframes emergencySlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.emergency-header {
+  text-align: center;
+  padding: 3vh 3vh 2vh;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+}
+
+.emergency-icon {
+  font-size: 4vh;
+  margin-bottom: 1vh;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.emergency-header h2 {
+  margin: 0 0 0.5vh 0;
+  font-size: 2.5vh;
+  font-weight: 700;
+}
+
+.emergency-header p {
+  margin: 0;
+  font-size: 1.4vh;
+  opacity: 0.9;
+}
+
+.emergency-options {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 2vh 3vh;
+}
+
+.emergency-options::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+.emergency-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.emergency-options::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1vh;
+}
+
+.emergency-option {
+  display: flex;
+  align-items: center;
+  padding: 2vh;
+  margin-bottom: 1.5vh;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: currentColor;
+}
+
+.option-icon {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+  margin-right: 2vh;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-content {
+  flex: 1;
+}
+
+.option-content h3 {
+  margin: 0 0 0.5vh 0;
+  font-size: 1.6vh;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.option-content p {
+  margin: 0 0 0.5vh 0;
+  font-size: 1.2vh;
+  color: #7f8c8d;
+}
+
+.phone-number {
+  font-size: 1.4vh;
+  font-weight: 600;
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  padding: 0.3vh 0.8vh;
+  border-radius: 6px;
+}
+
+.call-icon {
+  font-size: 2vh;
+  color: #27ae60;
+  margin-left: 1vh;
+}
+
+.emergency-footer {
+  padding: 2vh 3vh 3vh;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cancel-btn {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  padding: 1vh 3vh;
+  border-radius: 8px;
+  font-size: 1.4vh;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1vh;
+}
+
+.cancel-btn:hover {
+  background: #7f8c8d;
+  transform: translateY(-1px);
+}
+
+.emergency-note {
+  margin-top: 1vh;
+}
+
+.emergency-note p {
+  margin: 0;
+  font-size: 1.2vh;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emergency-popup {
+    width: 95vw;
+    max-height: 85vh;
+  }
+  
+  .emergency-header {
+    padding: 2vh 2vh 1.5vh;
+  }
+  
+  .emergency-icon {
+    font-size: 3vh;
+  }
+  
+  .emergency-header h2 {
+    font-size: 2vh;
+  }
+  
+  .emergency-header p {
+    font-size: 1.2vh;
+  }
+  
+  .emergency-options {
+    padding: 1.5vh 2vh;
+  }
+  
+  .emergency-option {
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+  }
+  
+  .option-icon {
+    width: 4vh;
+    height: 4vh;
+    font-size: 2vh;
+    margin-right: 1.5vh;
+  }
+  
+  .option-content h3 {
+    font-size: 1.4vh;
+  }
+  
+  .option-content p {
+    font-size: 1.1vh;
+  }
+  
+  .phone-number {
+    font-size: 1.2vh;
+  }
+  
+  .emergency-footer {
+    padding: 1.5vh 2vh 2vh;
+  }
+  
+  .cancel-btn {
+    padding: 0.8vh 2.5vh;
+    font-size: 1.2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .emergency-popup {
+    width: 100vw;
+    max-height: 90vh;
+    border-radius: 0;
+  }
+  
+  .emergency-header {
+    padding: 1.5vh 1.5vh 1vh;
+  }
+  
+  .emergency-icon {
+    font-size: 2.5vh;
+  }
+  
+  .emergency-header h2 {
+    font-size: 1.8vh;
+  }
+  
+  .emergency-header p {
+    font-size: 1.1vh;
+  }
+  
+  .emergency-options {
+    padding: 1vh 1.5vh;
+  }
+  
+  .emergency-option {
+    padding: 1vh;
+    margin-bottom: 0.8vh;
+  }
+  
+  .option-icon {
+    width: 3.5vh;
+    height: 3.5vh;
+    font-size: 1.8vh;
+    margin-right: 1vh;
+  }
+  
+  .option-content h3 {
+    font-size: 1.3vh;
+  }
+  
+  .option-content p {
+    font-size: 1vh;
+  }
+  
+  .phone-number {
+    font-size: 1.1vh;
+  }
+  
+  .emergency-footer {
+    padding: 1vh 1.5vh 1.5vh;
+  }
+  
+  .cancel-btn {
+    padding: 0.7vh 2vh;
+    font-size: 1.1vh;
+  }
+} 

@@ -1,0 +1,442 @@
+/* Export Records Popup Styles */
+.export-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.export-popup {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90vw;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow: hidden;
+  animation: exportSlideIn 0.3s ease-out;
+}
+
+@keyframes exportSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.export-header {
+  text-align: center;
+  padding: 3vh 3vh 2vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.export-icon {
+  font-size: 4vh;
+  margin-bottom: 1vh;
+}
+
+.export-header h2 {
+  margin: 0 0 0.5vh 0;
+  font-size: 2.5vh;
+  font-weight: 700;
+}
+
+.export-header p {
+  margin: 0;
+  font-size: 1.4vh;
+  opacity: 0.9;
+}
+
+.export-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 2vh 3vh;
+}
+
+.export-content::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+.export-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.export-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1vh;
+}
+
+.export-section {
+  margin-bottom: 3vh;
+}
+
+.export-section h3 {
+  margin: 0 0 1.5vh 0;
+  font-size: 1.8vh;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Format Options */
+.format-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5vh;
+}
+
+.format-option {
+  display: flex;
+  align-items: center;
+  padding: 2vh;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.format-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.format-option.selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.format-icon {
+  font-size: 3vh;
+  margin-right: 2vh;
+}
+
+.format-info h4 {
+  margin: 0 0 0.3vh 0;
+  font-size: 1.4vh;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.format-info p {
+  margin: 0;
+  font-size: 1.2vh;
+  color: #7f8c8d;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  background: #27ae60;
+  color: white;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vh;
+  font-weight: bold;
+}
+
+/* Record Options */
+.record-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1vh;
+}
+
+.record-option {
+  display: flex;
+  align-items: center;
+  padding: 1.5vh;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.record-option:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.record-option.selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.record-icon {
+  font-size: 2vh;
+  margin-right: 1vh;
+}
+
+.record-option span {
+  font-size: 1.3vh;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Date Options */
+.date-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1vh;
+}
+
+.date-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2vh 1.5vh;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.date-option:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.date-option.selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.date-option span {
+  font-size: 1.3vh;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.export-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 3vh 3vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cancel-btn {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  padding: 1vh 3vh;
+  border-radius: 8px;
+  font-size: 1.4vh;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #7f8c8d;
+  transform: translateY(-1px);
+}
+
+.export-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1vh 3vh;
+  border-radius: 8px;
+  font-size: 1.4vh;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.export-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .export-popup {
+    width: 95vw;
+    max-height: 90vh;
+  }
+  
+  .export-header {
+    padding: 2vh 2vh 1.5vh;
+  }
+  
+  .export-icon {
+    font-size: 3vh;
+  }
+  
+  .export-header h2 {
+    font-size: 2vh;
+  }
+  
+  .export-header p {
+    font-size: 1.2vh;
+  }
+  
+  .export-content {
+    padding: 1.5vh 2vh;
+  }
+  
+  .export-section h3 {
+    font-size: 1.6vh;
+  }
+  
+  .format-options {
+    grid-template-columns: 1fr;
+    gap: 1vh;
+  }
+  
+  .format-option {
+    padding: 1.5vh;
+  }
+  
+  .format-icon {
+    font-size: 2.5vh;
+    margin-right: 1.5vh;
+  }
+  
+  .format-info h4 {
+    font-size: 1.3vh;
+  }
+  
+  .format-info p {
+    font-size: 1.1vh;
+  }
+  
+  .record-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .record-option {
+    padding: 1.2vh;
+  }
+  
+  .record-icon {
+    font-size: 1.8vh;
+  }
+  
+  .record-option span {
+    font-size: 1.2vh;
+  }
+  
+  .date-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-option {
+    padding: 1vh 1.2vh;
+  }
+  
+  .date-option span {
+    font-size: 1.2vh;
+  }
+  
+  .export-footer {
+    padding: 1.5vh 2vh 2vh;
+  }
+  
+  .cancel-btn, .export-btn {
+    padding: 0.8vh 2.5vh;
+    font-size: 1.2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .export-popup {
+    width: 100vw;
+    max-height: 95vh;
+    border-radius: 0;
+  }
+  
+  .export-header {
+    padding: 1.5vh 1.5vh 1vh;
+  }
+  
+  .export-icon {
+    font-size: 2.5vh;
+  }
+  
+  .export-header h2 {
+    font-size: 1.8vh;
+  }
+  
+  .export-header p {
+    font-size: 1.1vh;
+  }
+  
+  .export-content {
+    padding: 1vh 1.5vh;
+  }
+  
+  .export-section h3 {
+    font-size: 1.4vh;
+  }
+  
+  .format-option {
+    padding: 1vh;
+  }
+  
+  .format-icon {
+    font-size: 2vh;
+    margin-right: 1vh;
+  }
+  
+  .format-info h4 {
+    font-size: 1.2vh;
+  }
+  
+  .format-info p {
+    font-size: 1vh;
+  }
+  
+  .record-option {
+    padding: 1vh;
+  }
+  
+  .record-icon {
+    font-size: 1.6vh;
+  }
+  
+  .record-option span {
+    font-size: 1.1vh;
+  }
+  
+  .date-option {
+    padding: 0.8vh 1vh;
+  }
+  
+  .date-option span {
+    font-size: 1.1vh;
+  }
+  
+  .export-footer {
+    padding: 1vh 1.5vh 1.5vh;
+  }
+  
+  .cancel-btn, .export-btn {
+    padding: 0.7vh 2vh;
+    font-size: 1.1vh;
+  }
+} 

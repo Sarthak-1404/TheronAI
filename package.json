@@ -1,0 +1,35 @@
+{
+  "name": "smarthealth-final",
+  "version": "1.0.0",
+  "description": "SmartHealth Healthcare Management System",
+  "private": true,
+  "workspaces": [
+    "my-react-app",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd my-react-app && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd my-react-app && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd my-react-app && npm install && cd ../backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "healthcare",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "chatbot"
+  ],
+  "author": "SmartHealth Team",
+  "license": "MIT"
+} 

@@ -1,0 +1,205 @@
+/* 3D Human Body Model Component Styles */
+.human-body-3d {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2vh;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for human-body-3d */
+.human-body-3d::-webkit-scrollbar {
+  width: 6px;
+}
+
+.human-body-3d::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.human-body-3d::-webkit-scrollbar-thumb {
+  background: rgba(46, 204, 113, 0.5);
+  border-radius: 3px;
+}
+
+.human-body-3d::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 204, 113, 0.7);
+}
+
+.model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5vh;
+}
+
+.model-header h3 {
+  font-size: 1.6vh;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.model-controls {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.control-btn {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  border-radius: 8px;
+  padding: 0.5vh 1vh;
+  font-size: 1vh;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(46, 204, 113, 0.2);
+  transform: translateY(-1px);
+}
+
+.model-status {
+  font-size: 1vh;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.threejs-container {
+  flex: 1;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5vh;
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  max-height: 400px;
+  aspect-ratio: 3/4;
+  width: 100%;
+}
+
+.threejs-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.model-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2vh;
+  margin-bottom: 1.5vh;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+  font-size: 1.1vh;
+  color: #2c3e50;
+}
+
+.legend-color {
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 50%;
+}
+
+.legend-color.affected {
+  background-color: #e74c3c;
+}
+
+.legend-color.normal {
+  background-color: #b8c4d9;
+  border: 1px solid #8ba3c7;
+}
+
+.model-instructions {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+  padding: 1vh;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.model-instructions h4 {
+  font-size: 1.2vh;
+  color: #2c3e50;
+  margin-bottom: 0.8vh;
+}
+
+.model-instructions ul {
+  margin: 0;
+  padding-left: 1.5vh;
+}
+
+.model-instructions li {
+  font-size: 1vh;
+  color: #555;
+  margin-bottom: 0.3vh;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .human-body-3d {
+    height: 400px;
+    max-height: 400px;
+  }
+  
+  .threejs-container {
+    min-height: 250px;
+    max-height: 300px;
+    aspect-ratio: 3/4;
+    width: 100%;
+  }
+  
+  .model-header {
+    flex-direction: column;
+    gap: 1vh;
+    align-items: flex-start;
+  }
+  
+  .model-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .model-instructions {
+    padding: 0.8vh;
+  }
+  
+  .model-instructions h4 {
+    font-size: 1.1vh;
+  }
+  
+  .model-instructions li {
+    font-size: 0.9vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .human-body-3d {
+    padding: 1.5vh;
+  }
+  
+  .model-legend {
+    flex-direction: column;
+    gap: 1vh;
+  }
+  
+  .legend-item {
+    justify-content: center;
+  }
+} 
