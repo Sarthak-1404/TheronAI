@@ -4,7 +4,7 @@
   "description": "Backend for Healthcare Management System",
   "main": "server.js",
   "scripts": {
-    "start": "node start.js",
+    "start": "node start-prod.js",
     "dev": "node start.js dev",
     "dev-no-mongo": "node start.js dev-no-mongo",
     "test": "node start.js test",
