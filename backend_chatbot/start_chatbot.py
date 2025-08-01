@@ -64,11 +64,13 @@ def start_chatbot():
     print("=" * 50)
     
     try:
-        # Start the Flask app
-        subprocess.run([sys.executable, 'app.py'], check=True)
+        # Import and run the Flask app directly
+        from app import app
+        port = int(os.environ.get('PORT', 5001))
+        app.run(debug=False, host='0.0.0.0', port=port)
     except KeyboardInterrupt:
         print("\n🛑 Server stopped by user")
-    except subprocess.CalledProcessError as e:
+    except Exception as e:
         print(f"❌ Error starting server: {e}")
         return False
     
