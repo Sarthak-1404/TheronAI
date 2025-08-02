@@ -9,7 +9,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: process.env.NODE_ENV === 'production' ? undefined : './config.env' });
 
 // Import routes
 const authRoutes = require('./routes/auth');
