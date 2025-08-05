@@ -30,7 +30,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173", // React app URL
+    origin: process.env.NODE_ENV === 'production' 
+      ? ['https://smarthealth-frontend-fswvq45l1-sarthak-1404s-projects.vercel.app', 'https://smarthealth-frontend-hvsn5zyi5-sarthak-1404s-projects.vercel.app']
+      : ["http://localhost:5173"],
     methods: ["GET", "POST"]
   }
 });
@@ -39,7 +41,7 @@ const io = socketIo(server, {
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] 
+    ? ['https://smarthealth-frontend-fswvq45l1-sarthak-1404s-projects.vercel.app', 'https://smarthealth-frontend-hvsn5zyi5-sarthak-1404s-projects.vercel.app'] 
     : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
