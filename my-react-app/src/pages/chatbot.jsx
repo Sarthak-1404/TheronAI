@@ -48,7 +48,7 @@ const Chatbot = ({ onEmergencyClick }) => {
       
       try {
         // Call the Python chatbot backend
-        const response = await fetch('http://localhost:5001/api/chat', {
+        const response = await fetch('https://theron-chat.onrender.com/api/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const Chatbot = ({ onEmergencyClick }) => {
         const fallbackResponse = {
           id: chatHistory.length + 2,
           type: 'bot',
-          message: 'I\'m sorry, but I\'m currently unable to connect to my AI service. Please make sure the chatbot backend is running on port 5001.',
+          message: 'I\'m sorry, but I\'m currently unable to connect to my AI service. Please try again later.',
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
         setChatHistory(prev => [...prev, fallbackResponse]);
